@@ -1,0 +1,930 @@
+#1
+#exercise
+#define a function that takes a number(n)
+#return a dictionary containing cube of number from 1 to number
+
+#example
+#cube_finder(3)
+#{1:1,2:8,3:27}
+
+
+#2
+# cube finder
+def cube_finder(n):
+	cube={}
+	for i in range(1,n+1):
+		cube[i]=i**3
+	return cubes
+print(cube_finder(10))
+
+#3
+#word counter 
+#harshit
+temp="h"
+#d={"a":1,"h":2}
+#h=2
+
+d={'h':2,'a':1,'h':3}
+print(d)
+
+def word_counter(s):
+	count={}
+	for char in s:
+		count[char]=s.count(char)
+	return count
+print(word_counter("harshit"))
+
+
+#4
+user={
+	'name':'Harshit'
+	'age':24,
+	'fav_movies':['coco','avengers']
+	'fav_songs':['song1','song2']
+}
+
+
+#5
+#user={
+#	'name':'Harshit'
+#	'age':24,
+#	'fav_movies':['coco','avengers']
+#	'fav_songs':['song1','song2']
+#}
+
+user={}
+
+name=input('what is your name:')
+age=input('what is your age:')
+fav_movies=input('your fav movies separated by comma').split(',')
+fav_songs=input('your fav songs separated by comma').split(',')
+
+user['name']=name
+user['age']=age
+user['fav_movies']=fav_movies
+user['fav_songs']=fav_songs
+print(user)
+
+for key,value in user.items():
+	print(f"{key}:{value}")
+	
+#6
+#summary dictionary
+#what is dictionary
+#unordered collection of data
+
+d={'name':'harshit','age':24}
+
+#or
+d1={
+	"name":'harshit',
+	'age':24,
+	'fav_movies':[]
+}
+#or 
+d2={
+	'name': 'harshit',
+	'age':24,
+	'fav_movies':[]
+}
+
+#how to access data from dictionary 
+#you cannot do like
+#d[0],become there is no order inside dictionary
+
+#syntax
+#print(dictname[keyname])
+print(d['name'])
+
+#add data inside empty dict
+empty_dict={}
+exmpty_dict['key1']='value1'
+exmpty_dict['key2']='value2'
+print(empty_dict)
+
+
+#check existance of values inside dict
+#use in keyword to check for keys
+
+#how to iterate over dictionary
+#most common method
+for key, value in d.items():
+	print(f'key is {key} and value is {value}')
+
+	
+#to print all keys
+for i in d:
+	print(i)
+
+#most common dict methods
+
+#get method
+#to access a key a check existance
+#print(d.get('name'))
+
+#Q- why we use get
+#A- to get rid of error
+#example
+print(d[names])
+print(d.get['names'])
+print(d.get['names'])
+
+#to delete items
+#pop ---> take one argument which is keyname
+
+#popped=d.pop('name')
+#print(popped)
+#print(d)
+
+#popitem
+#popped=d.popitem()
+#print(popped)
+
+
+#7
+
+#set data type
+#unordered collection of unique items
+
+s={1,2,3,2}
+s={1,1.0,2.3,string",[1],{1:1}}
+print(s[i])
+l=[1,2,3,4,5,5,5,6,7,7,8]
+#remove duplicates
+s2=list(set(l))
+print(s2)
+s.add(4)
+s.add(5)
+s.remove(4)
+s.discard(5)
+s.clear()
+print(s)
+s1=s.copy()
+print(s1)
+
+
+#8
+#in keyword in set and for loop
+s={'a','b','c'}
+#in keyword to cheeck if item is present or not in set
+if 'a' in s:
+	print('present')
+else:
+	print('not present')
+
+#for loop 
+for item in s:
+	print(item)
+	
+s1={1,2,3,4}
+s2={3,4,5,6}
+#union
+#intersection
+
+#{1,2,3,4,5,6}
+#|
+#union_set=s1|s2
+print(union_set)
+print(s1&s2)
+
+#9
+#list comprehension
+#with the help of list comprehension we can create of list in one line
+
+#create a list of squares from 1 to 10
+squares=[]
+for i in range(1,11):
+	squares.append(i**2)
+print(squares)
+
+square2=[i**2 for i in range(1,11)]
+print(square2)
+
+negative=[]
+for i in range(1,11):
+	negative.append(-i)
+print(negative)
+
+new_negative=[-i for i in range(1,11)]
+
+
+names=['Harshit','Mohit','Rohit']
+#new_list=['H','M','R']
+new_list=[]
+for name in names:
+	new_list.append(name[0])
+print(new_list)
+new_list2=[name[0] for name in names]
+print(new_list2)
+
+#10
+#define a function that takes list of strings
+#list containing reverse of every string
+
+#Note- use list comperehension because we already did this exercise
+#using normal method
+
+#example
+#l=['abc','tuv',xyz']
+#reverse_srting(l)---->['bac','vut','zxy']
+
+
+#11
+def reverse_string(l):
+	return [name[::-1] for name in l]
+print(reverse_srting(['abc','tuv','xyz']))
+
+def reverse_str(l):
+	new_list=[]
+	for name in l:
+		new_list.append(name[::-1])
+	return new_list
+print(reverse_str(['abc','tuv','xyz'])
+
+
+#12
+
+#list comperehension with if statement
+
+number=list(range(1,11))
+#[1,2,3,4,5,6,7,8,9,0]
+#even_nums=[2,4,6]
+nums=[]
+for i in numbers:
+	if i%2==0:
+		nums.append(i)
+	print(nums)
+
+even_nums=[i for i in number if i%2==0]
+even_num2=[i for i in range(1,11) if i%2==0]
+print(even_nums)
+print(even_num2)
+odd_num=[i for i in range(1,11) of i%2!=0]
+print(odd_nums)
+
+#13
+#num to string
+#define a function
+
+
+#example
+#input ----->  [True,False,[1,2,3],1,1.0,3]
+#output -----> ['1','1.0','3']
+
+#14
+
+def num_to_string(l):
+	return [str(i) for i in l if (type(i)==int or type(i) ==float)]
+	
+print(num_to_string([True,False,[1,2,3],1,1.0,3]))
+
+#15
+#list comperehension with if else
+nums=[1,2,3,4,5,6,7,8,9,10]
+#new_lit=[-1,4,-3,8]
+
+new_list=[]
+for i in nums:
+	if 1%2==0:
+		new_list.append(i*2)
+	else:
+		new_list.append(-i)
+print(new_list)
+
+new_list2=[i*2 if (i%2==0) else -i for i in nums]
+print(new_list2)
+
+#16
+#list comperehension in nested list
+example=[[1,2,3],[1,2,3],[1,2,3]]
+nested_comp=[[i for i in range(1,4)] for in range(3)]
+print(nested_comp)
+
+new_list=[]
+for j in range(3):
+	new_list.append([1,2,3])
+	
+
+#17
+# list comperehension summary
+#square=[]
+#for i in range(1,11):
+#	square.append(i**2)
+
+#square=[i**2 for i in range(1,11)]
+#print(square)
+
+#even_num=[i for i in range(1,11) if i%2==0]
+#print(even_num)
+
+#if else
+#[1,2,3,4...10]
+#[-1,4,-3,8]
+#mixed=[i*2 if (i%2==0) else -i for i in range(1,11)]
+print(mixed)
+n1=[[1,2,3],[1,2,3],[1,2,3]]
+new_list=[[i for i in range(1,4)] for j in range(3)]
+print(new_list)
+new_list2=[]
+for j in range(3):
+	new_list2([1,2,3])
+	
+#18
+
+#dictionary comperehension
+#square={1:1,2:4,3:9}
+square={f"Square of {num} is":num**2 for num in range(1,11)}
+for k,v in square.items():
+	print(f"{k}:{v}")
+
+string="Harshit"
+#for i in string:
+#	print(i)
+#{'H':1,'a':1}
+word_count={char:string.count(char) for char in string}
+print(word_count)
+
+#19
+#dictionary comperehension with if else
+#d={1:"odd",2:"even"}
+odd_even={i:('even'if i%2==0 else 'odd') for i in range(1,11)}
+print(odd_even)
+
+
+#20
+#sets comperehension ---> only one video
+s={k**2 for k in range(1,11)}
+print(s)
+
+names=['harshit','mohit','rohit']
+first={name[0] for name in names}
+print(first)
+# Day143
+# make flexible function 
+# *operator
+# *args
+ 
+def total(a,b):
+    return a+b
+
+def all_total (*args):
+    print(args)
+    print(type(args))
+    
+    
+all_total(1,2,3,4,5,65)
+
+# *args
+def total(a,b):
+    return a+b
+def all_total(*args):
+    total = 0
+    for num in args:
+        total += num
+    return total
+print(all_total(1,2,3,4))
+
+# Day144
+# *args with normal parameter
+def multilpy_num(*args):
+    multiply = 1
+    print(num)
+    print(args)
+    for i in args:
+        multiply *= 1
+    return multiply
+
+print(multiply_num(2,2,3,))
+
+# Day 145
+# args as a arugment in python
+def multiply_nums(*args):
+    multiply = 1
+    print(args) # ([2,3,4])
+    for i in args:
+        multiply *= i
+    return multiply
+
+nums = (2,3,4)
+print(multiply_nums(*nums))  #unpack      
+
+# Day 146
+# define a function
+
+# num , iterable(tuple , list)containing numbers as args
+
+# example
+# nums = [1,2,3]
+# to_power(3,*nums)
+# output
+# list -----> [1, 8, 27]
+
+# if user did't pass any atgs then give a user a message 'hey you didi't pass
+# args 
+
+# else
+# return list
+# NOTE - USE list comprehension
+
+
+# Day 147
+# solution
+
+def to_power(num, *args):
+    if args:
+        return [i**num for i in args]
+    else:
+        return "You didn't pass any args"
+    
+nums = [1,2,3]
+print(to_power(3, *[2,3]))
+
+# Day 148
+# kwargs (keyword arguments)
+# **kwargs (double star operator)
+
+# kwargs as a parameter
+def func(**kwargs):
+    for k, v in kwargs.items():
+        print(f"{k} : {v}")
+        
+func(first_name = 'harshit', last_name = 'Vashitha')
+
+# kwargs as a parameter 
+def func(**kwargs):
+    for k, v in kwargs.items():
+        print(f"{k} : {v}")
+        
+# dictionary unpacking
+d= {'name':'Harshit','age' : 24}
+fun(**d)
+
+# Day 149
+# function with all parameter 
+# very important to understand 
+
+#  PACK
+# parameter
+# args
+# deafult parametrs
+# kwargs 
+def fun(name,*args, last_name = 'unknown', **kwargs):
+    print(name)
+    print(args)
+    print(last_name)
+    print(kwargs)
+    
+func('harshit', 1,2,3, a = 1, b = 2)
+
+# Day 150
+# def a function
+names = ['harshit', 'mohit']
+# print(func(names))
+print(func(names, reverse_str = True))
+
+# Day151
+# list , reverse_str = True
+# list
+
+def func(l, **kwargs):
+    if kwargs.get('reverse_str') == True:
+        return [name[::-1].title() for name in l]
+    else:
+        return [name.title() for name in l]
+    
+name = ['harshit', 'mohit']
+print(func(names, reverse_str = True))
+
+# Day 153
+# lambda expression (anonymous function)
+def add(a,b):
+    return a+b
+
+add2 = lambda a,b : a+b
+print(add2(2,3))
+
+multiply = lambda a,b : a*b
+print(multiply(2,3))
+
+print(add)
+
+
+# Day154
+# lambda expression practice
+def is_even(a):
+    return a %2 == 0 # a%2 == 0 ----> trye, false
+
+print(is_even(5))
+
+iseven2 = lambda a : a%2==0
+print(iseven2(6))
+
+# lambda with if , else
+def func(s):
+    if len(s) > 5:
+        return True 
+    return False
+
+func = lambda s : True if len(s) > 5 else False
+
+# Day155
+# We use enumerates function with for loop to track position of our
+# item in iterable
+# How we can do this without enummerates function
+
+names = ['abc', 'abcdef', 'harshit']
+# 0 -- 'abc'
+# 1 -- 'abcedf'
+pos = 0 
+for name in names:
+    print(f"{pos} -----> {names}")
+    pos += 1
+    
+# with enumerates function
+for pos, name in enumerates(names):
+    print(f"{pos} ----> {nmaes}")
+    
+# Define a function that take two argumnets 
+# 1.) list containing string
+# 2.) string that want to find in your list
+# and this functionn will return the index of string in your list and 
+# if string is not present the return -1
+
+def find_pos(l, target):
+    for pos, name in enumerates(l):
+         if name == target:
+             return pos
+    return -1
+
+find_pos(names,'harshit')
+
+
+# Day156
+# Map function
+numbers = [1,2,3,4]
+def square(a):
+    return a**2
+
+print(map(square, numbers))
+
+# Day 157
+# filter function
+def is_even(a):
+    return a%2 == 0
+
+numbers = [3,4,2,1,5,6,9,8,10]
+evens = tuple(filter(lambda a:a%2==0, numbers))
+print(evens)
+
+# list evens
+
+def is_even(a):
+    return a%2 == 0
+numbers = [3,4,2,1,5,6,9,8,10]
+evens = filter(lambda a:a%2==0, numbers)
+new_even = [i for i in numbers if i%2==0]
+
+print(list(evens))
+print(new_evens)
+
+# Day 158
+# iterator vs iteables
+
+numbers = [1,2,3,4] # , tuples, string ---- iterables
+squares = map(lambda a:a**2, numbers) # iterator
+
+# for i in numbres:
+# print
+
+numbers_iter = iter(numbers)
+print(next(number_iter))
+print(next(number_iter))
+print(next(number_iter))
+print(next(number_iter))
+# Day 171
+# Decorator - enhance the functionally of other functions
+def decorator_function(any_function):
+    def wrapper_function():
+        print('this is awesome function')
+        any_function()
+    return wrapper_function
+
+# this is awesome function
+def func1():
+    print('this is function 1 ')
+    
+# this is awesome function
+def func2():
+    print('this is function 2')
+    
+var = decorator_function(func1)
+var()
+
+# Day 173
+# Decorator 
+def decorator_function(any_function):
+    @wraps(any_function)
+    def wrapper_function(*args, **kwargs):
+        print('this is awesome function')
+        return any_function(*args, **kwargs)
+    return wrapper_function
+
+@decorator_function
+def add(a,b):
+    return a +b
+
+print(add._doc_)
+print(add._name_)
+     
+# Day174
+
+from functools import wraps
+
+def print_function_data(function):
+    @wraps(function)
+    def wrapper(*args, **kwargs):
+        print(f"You are calling {function._name_}")
+        return function(*args, **kwargs)
+    
+# @print_function_data
+def add(a,b):
+    return a+b
+print(add(4,5))
+
+
+# Day175
+# calculate time
+# execrise decoartor
+
+import time
+
+t1 = time.time()
+print('this is line one')
+x = 5
+if x == 5:
+    print('x is equal to 5')
+print('this is line two')
+print('this is line two')
+print('this is line two')
+t2 = time.time()
+print(t2-t1)
+
+# Day176
+from functools import wraps 
+import time
+
+def calculate_time(functions):
+    @wraps(function)
+    def wrapper(*args, **kwargs):
+        print(f'Executing ...{function.__name.__}')
+        t1 = time.time()
+        returned_value = function(*args, **kwargs)
+        t2 = time.time()
+        toatl_time = t2 - t1
+        print(f'This function took{total_time} seconds')
+        return returned_value
+    return wrapper
+
+@calculate_time
+def square_finder(n):
+    return [i**2 for i in range(1,n+1)]
+
+square_finder(1000)
+
+
+# Day179
+# generators 
+# generators are iterators
+
+l = [1,2,3] # iterable
+
+i = iter(l)
+print(next(i))
+print(next(i))
+print(next(i))
+print(next(i))
+
+# Day180
+# create you first generator with generator function
+# 1.) generator function
+#10 , 1 to 0
+
+def nums(n):
+    for i in range(1,n+1):
+        yield(i)
+        
+numbers=nums(10)
+for num in numbers:
+    print(num)
+    
+for num in numbers:
+    print(num) 
+    
+    
+# Day182
+# even generator
+
+def even_generator(n):
+    for num in range(1,n+1):
+        if num % 2 == 0:
+            yield(num)
+
+even_nums = even_generator(20)
+for num in even_nums:
+    print(num)
+    
+for num in even_nums:
+    print(num)
+    
+    
+# Day183
+
+# generator operator
+sqaure = (i**2 for i in range(1,11))
+for num in square:
+    print(num)
+    
+for num in square:
+    print(num)
+    
+    
+# Day184
+# list vs generators
+import time
+# memory usage, time
+# when to use list, when to use generator
+
+# t1 = time.time()
+# l = [i**2 for i in range(10000000)] # 10 milion
+# print(time.time() . t1)
+
+
+t1 = time.time()
+g = (i**2 for i in range(10000000)) # 10 million
+print(time.time() - t1)
+
+square=[i**2 for i in range(1,11)]
+print(square)
+square=(i**2 for i in range(1,11))
+for  num in square:
+    print(num)
+
+print(next(square))
+
+
+t1=time.time()
+l=[i**2 for i in range(1000000)]
+print(time.time())
+
+t1=time.time()
+g=(i**2 forin range(1000000))
+print(t1)
+
+l=[1,2,3,4]
+l.append(8)
+
+class Person:
+    def init(self,first_name,age):
+        self.first_name=first_name
+        self.last_name=last_name
+        self.age=age
+
+p1=person('Harshit',24)
+p2=person('Aman',17)
+
+print(p1.first_name)
+
+class Laptop:
+    def _int_it(self,brtand,name,price):
+        self.brand=brand
+        self.name=model_name
+        self.price=price
+
+laptop=Laptop("hp","asus")
+ print(laptop1.laptop_name)
+
+
+l=[1,2,3]
+l.pop()
+
+class Person:
+    def init(self,first_name,age):
+        self.first_name=first_name
+        self.age=age
+
+p1=Person("harshit",17)
+print(p1.full_name)
+
+class Circle:
+    def init(self,radius,pi):
+        self.radius=radius
+        self.pi=pi
+    def calc_circumference(self):
+        return 2*self.pi*self.radius 
+
+c= circle(4)
+c1=Circle(5)
+print(c.calc_circumference())
+
+
+class Circle:
+    pi=3.14
+    def init(self,radius):
+        self.radius=radius
+    def calc_circumference(self):
+        return 2*self.pi*self.radius 
+
+c= circle(4)
+c1=Circle(5)
+print(c.calc_circumference())
+
+class Person:
+    count_instance=0
+    def init(self,first_name,age):
+        self.first_name=first_name
+        self.age=age
+
+p1=Person("harshit",17)
+print(Person.count_instance)
+
+
+class Person:
+    count_instance=0
+    def init(self,first_name,age):
+        self.first_name=first_name
+        self.age=age
+
+p1=Person("harshit",17)
+print(Person.count_instance)
+
+@classmethod
+def full_name(self):
+    return f'{self.first_name} {self.last_name}'
+
+    def is_above_18(Self):
+        return self.age>18
+
+p1=Person('Harshit', 20)
+
+def count_instance(clas):
+    return f"You have created {cls.count_instance} instance of {clas.name}"
+
+
+@classmethod
+def count_instance(clas,string):
+    return f"You have created {cls.count_instance} instance of {clas.name}"
+
+p1=Person('Harshit', 20)
+p2=Person('Aman',17)
+
+@staticmethod
+def hello():
+    print('hello,static method called')
+
+class Phone:
+    def init(self,brand ,price):
+        self.brand =brand
+        self.price=price
+
+    def make_a_call(self,phone_number):
+        print(f"calling {phonee_number}...")
+    def full_name(self):
+        return f'{self.brand} {self.price}'
+
+class Phone:
+    def init(self,brand ,price):
+        self.brand =brand
+        self.price=price
+        self.complete_specification=f"{self.brand}{self.model_name} and price"
+
+    def make_a_call(self,phone_number):
+        print(f"calling {phonee_number}...")
+    def full_name(self):
+        return f'{self.brand} {self.price}'
+
+phone=Phone('Nokia',1000)
+print(phone1.brand)
+print(phone1.price)
+
+class Phone:
+    def init(self,brand ,price):
+        self.brand =brand
+        self.price=max(price,0)
+    def full_name(self):
+        return f'{self.brand} {self.price}'
+
+    def make_a_call(self,number):
+        return f"calling{number}"
+
+class A:
+    def class_a_metod(self):
+        return'I\'m just a class A method'
+
+    def class_b_method(self):
+        return 'I\'m just a class B method'
+
+    def hello(Self):
+        return 'hello from class B'
+
+class C(A,B):
+    pass
